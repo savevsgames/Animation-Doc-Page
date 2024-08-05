@@ -1,0 +1,165 @@
+body {
+  background-color: #1d1d1d;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+.sky {
+  background-image: linear-gradient(rgb(97, 191, 228), rgb(204, 233, 245));
+  height: 50vh;
+  position: relative;
+}
+.sky .cloud1 {
+  position: absolute;
+  height: 30%;
+  top: 10%;
+  left: 10%;
+}
+.sky .cloud2 {
+  position: absolute;
+  height: 30%;
+  top: 20%;
+  right: 10%;
+}
+
+.ground {
+  height: 50vh;
+  position: relative;
+}
+.ground .street {
+  background-image: linear-gradient(#464646, #242424);
+  position: absolute;
+  width: 200vw;
+  height: 100%;
+}
+.ground .street .lines {
+  position: absolute;
+  background-image: url("../../assets/images/line.png");
+  background-size: 12.5% auto;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  height: 4%;
+  width: 100%;
+  top: 50%;
+  opacity: 0.8;
+}
+
+/* character shadow */
+.shadow {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 20vh;
+  aspect-ratio: 10;
+  border-radius: 50%;
+  background-color: #000000;
+  opacity: 0.4;
+  filter: blur(1rem);
+}
+
+.character {
+  --char-width: 25vh;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url("../../assets/images/running-man-8-frames-v2.png");
+  background-size: calc(var(--char-width) * 8);
+  background-position: calc(var(--char-width) * -5) 0px;
+  background-repeat: no-repeat;
+  width: var(--char-width);
+  aspect-ratio: 0.535;
+}
+
+/* the !important keyword overrides the computed styles and inserts this char position for jump */
+.character.jump {
+  background-position: calc(var(--char-width) * -4) 0px !important;
+}
+
+.background {
+  position: absolute;
+  height: 50vh;
+  width: 100%;
+  top: 0;
+}
+.background img {
+  position: absolute;
+  height: 50%;
+  bottom: -1rem;
+  left: 0;
+}
+.foreground {
+  position: absolute;
+  height: 50vh;
+  width: 100%;
+  top: 50%;
+}
+.foreground img {
+  position: absolute;
+  height: 90%;
+  bottom: 0px;
+  left: 0;
+}
+
+.cloudmove {
+  position: absolute;
+  height: 50vh;
+  width: 100%;
+  top: 0;
+}
+.cloudmove img {
+  position: absolute;
+  height: 30%;
+  bottom: 25rem;
+  left: 0;
+}
+
+.car-wrapper {
+    position: relative;
+}
+
+.car {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    background-image: url("../../assets/images/limo.png");
+    --car-width: 220vh;
+    background-size: contain;
+    width: var(--car-width);
+    aspect-ratio: 5;
+    background-repeat: no-repeat;
+}
+
+
+.car::before {
+    content: "";
+    background-image: url("../../assets/images/coin-wheel.png");
+    background-size: cover;
+    width: 8%;
+    aspect-ratio: 1;
+    bottom: 6%;
+    right: 23%;
+    position: absolute;
+}
+
+.car::after {
+    content: "";
+    background-image: url("../../assets/images/coin-wheel.png");
+    background-size: cover;
+    width: 8%;
+    aspect-ratio: 1;
+    bottom: 6%;
+    right: 78%;
+    position: absolute;
+}

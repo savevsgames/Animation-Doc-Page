@@ -3,134 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Web Animations API</title>
-    <script src="./js/script5.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Web Animations API Exercise</title>
+    <script src="./assets/js/script.js"></script>
   </head>
   <body>
-    <div class="square"><p>JS</p></div>
-
-    <div class="controls">
-      <div class="section">
-        <h3>Animation Object (the player)</h3>
-        <button class="button play">Play</button>
-        <button class="button pause">Pause</button>
-        <button class="button cancel">Cancel</button>
-        <button class="button reverse">Reverse</button>
-        <button class="button finish">Finish</button>
-
-        <br />
-        <p>
-          <br />
-          <label for="playbackRateInput">Playback Rate</label>
-          <input
-            type="range"
-            id="playbackRateInput"
-            step="0.2"
-            min="0"
-            max="2"
-          />
-          <output for="playbackRateInput" id="playbackRateInputValue">1</output>
-          <br />
-        </p>
-        <p>
-          <br />
-          <label for="currentTimeInput">currentTime Input: </label>
-          <input
-            name="currentTimeInput"
-            id="currentTimeInput"
-            type="number"
-            min="0"
-            step="500"
-            class="numberInput"
-          />
-          <span>ms (500ms steps)</span>
-        </p>
-        <p>
-          <br />
-          <label for="startTimeInput">startTime Input: </label>
-          <input
-            name="startTimeInput"
-            id="startTimeInput"
-            type="number"
-            min="0"
-            step="2500"
-            class="numberInput"
-          />
-          <span>ms (2.5s steps)</span>
-        </p>
-        <p>
-          LOG ANIMATION INFO below to find percentage of 1 Complete Animation:
-          <br />
-          <span id="percentComplete" class="percentComplete"> </span>
-          <span class="percentComplete"> % Complete </span>
-        </p>
+    <div class="view">
+      <div class="sky">
+        <img src="assets/images/cloud1.png" class="cloud1" alt="" />
+        <img src="assets/images/cloud2.png" class="cloud2" alt="" />
       </div>
-      <br /><br />
-      <div class="section">
-        <h3>Animation Effect (Keyframe Modifiers)</h3>
-        <label for="durationInput">Duration</label>
-        <input
-          type="range"
-          min="0"
-          max="10000"
-          step="500"
-          name="durationInput"
-          id="durationInput"
-        />
-        <output id="durationInputValue" for="durationInputValue">5</output>
-        <br />
-        <p>
-          <br />
-          <label for="infintyInput">Infinity Run Mode</label>
-          <input type="checkbox" id="infinityInput" />
-          <br />
-        </p>
-        <p>
-          <br />
-          <button class="button changeAnimation">Change Animation</button>
-        </p>
+      <div class="cloudmove">
+        <img src="assets/images/cloud3.png" alt="" />
       </div>
-      <br /><br />
-      <div class="section">
-        <button class="button logInfo">Log Animation Info</button>
-        <ul id="results" class="wrap-text"></ul>
+      <div class="background">
+        <img src="assets/images/s1-2.png" alt="" />
       </div>
-      <br /><br />
-      <div class="section">
-        <h3>Paused, Pending & Async Promises</h3>
-
-        <h4>Animation Object</h4>
-        <p>
-          Creates a promise when our state is paused and places it on the
-          Animation Object's Ready PROPERTY.
-          <br />
-          When the animation is played, cancelled or finished, the promise is
-          resolved.
-        </p>
-        <div class="lineUp">
-          <span>.pause() ></span>
-          <button class="button-2">
-            RUNNING = false <br />
-            PAUSED & PENDING
-          </button>
-          <span>></span>
-          <button class="button-2">
-            PROMISE CREATED
-            <br />AnimObject.ready
-          </button>
-          <span>></span>
-          <button class="button-2">
-            ASYNC PROMISE
-            <br />
-            AnimObject.ready.then()
-          </button>
-          <p>
-            In order to be able to play again, we wait for the ready promise.
-            When pending = false, the animation is ready to be played again.
-          </p>
+      <div class="ground">
+        <div class="street">
+          <div class="lines"></div>
         </div>
-        <!--lineUp-->
+        <div class="shadow"></div>
+      </div>
+      <div class="character"></div>
+      <div class="car-wrapper">
+        <!-- <div class="car"></div> -->
+        <!-- for testing - this is where the cars will appear randomly -> JS -->
+      </div>
+      <div class="foreground">
+        <img src="assets/images/s2-2.png" alt="" />
       </div>
     </div>
   </body>
