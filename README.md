@@ -1,6 +1,3 @@
-Certainly! Here's a more professional and detailed version of the README.md:
-
-```markdown
 # Web Animation API Documentation
 
 ## Overview
@@ -16,7 +13,8 @@ This project provides an interactive documentation page for the JavaScript Web A
 
 ## Live Demo
 
-Experience the documentation in action: [Web Animation API Documentation](https://savevsgames.github.io/Animation-Doc-Page/)
+Experience the action:
+[Web Animation API Documentation](https://savevsgames.github.io/Animation-Doc-Page/)
 
 ## Technology Stack
 
@@ -30,17 +28,21 @@ Experience the documentation in action: [Web Animation API Documentation](https:
 To run this project locally:
 
 1. Clone the repository:
+
 ```
 
 git clone https://github.com/savevsgames/Animation-Doc-Page.git
 
 ```
+
 2. Navigate to the project directory:
+
 ```
 
 cd Animation-Doc-Page
 
 ```
+
 3. Open `index.html` in your preferred web browser.
 
 ## Contributing
@@ -71,6 +73,7 @@ Project Link: [https://github.com/savevsgames/Animation-Doc-Page](https://github
 ---
 
 © 2024 Greg Barker. All Rights Reserved.
+
 ```
 
 This version of the README:
@@ -84,3 +87,4 @@ This version of the README:
 7. Includes a contact section for further inquiries.
 
 This structure gives a more comprehensive and professional look to your project documentation, making it easier for others to understand, use, and potentially contribute to your work.
+```
